@@ -38,6 +38,6 @@ mes = randint(1,12)
 ano = randint(2020,2500)
 
 
-
+#atenção eu usei variáveis de ambiente no nome de usuário e senha da conta do bot, você pode usar variáveis de ambiente ou string mesmo 
 auxilio = TwitterBot(os.environ["USER"], os.environ["USER_PASSWORD"], 'o pagamento da {}º parcela do auxilio emergencial começa no dia {}/{}/{} '.format(parcela,dia,mes,ano))
 auxilio.login()
