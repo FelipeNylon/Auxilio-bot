@@ -32,11 +32,17 @@ class TwitterBot:
         time.sleep(4)
 
 
-parcela = randint(1, 1000)
+parcela = randint(1, 10000)
 dia = randint(1,31)
 mes = randint(1,12)
-ano = randint(2020,2500)
+ano = randint(2020,2700)
 
+if dia<10:
+    dia = "0{}".format(dia)    
+
+
+if mes<10:
+    mes = "0{}".format(mes)   
 
 
 auxilio = TwitterBot(os.environ["USER"], os.environ["USER_PASSWORD"], 'o pagamento da {}º parcela do auxilio emergencial começa no dia {}/{}/{} '.format(parcela,dia,mes,ano))
